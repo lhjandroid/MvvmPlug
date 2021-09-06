@@ -1,0 +1,5 @@
+import 'package:base_mvvm/base/mvvm/base_model.dart';
+
+class $nameModel extends BaseService {
+
+}

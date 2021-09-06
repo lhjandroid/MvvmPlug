@@ -1,0 +1,26 @@
+import 'package:base_mvvm/base/mvvm/base_state_view.dart';
+import 'package:flutter/material.dart';
+import 'package:$mvvmViewModel';
+
+class $namePage extends BaseStateView<$nameViewModel> {
+
+    @override
+    Widget buildView(BuildContext context) {
+
+    }
+
+    @override
+    String getTitle() {
+        return '';
+    }
+
+    @override
+    $nameViewModel createViewModel() {
+        return $nameViewModel();
+    }
+
+    @override
+    initPageState(BuildContext context) {
+
+    }
+ }
