@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>lhj.plugin.id</id>
   <name>base_mvvm</name>
-  <version>1.0</version>
+  <version>2.0</version>
   <vendor email="lhj_androidt@163.com" url="http://www.yourcompany.com">lihj个人开发</vendor>
 
   <description>
@@ -9,6 +9,8 @@
   </description>
 
   <change-notes>
+    版本2.0
+    加入包路径区分
     新版本1.0
   </change-notes>
 

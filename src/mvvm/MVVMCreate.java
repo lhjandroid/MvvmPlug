@@ -79,20 +79,20 @@ public class MVVMCreate extends AnAction {
             case Page:
                 fileName = "TemplatePage.txt";
                 content = ReadTemplateFile(fileName);
-                content = dealTemplateContent(content);
-                writeToFile(content, appPath + mPackageName.toLowerCase(), mModuleName.toLowerCase() + "_page.dart");
+                content = dealTemplateContent(content,"view_model");
+                writeToFile(content, appPath + mPackageName.toLowerCase() + "/view", mModuleName.toLowerCase() + "_page.dart");
                 break;
             case ViewModel:
                 fileName = "TemplateViewModel.txt";
                 content = ReadTemplateFile(fileName);
-                content = dealTemplateContent(content);
-                writeToFile(content, appPath + mPackageName.toLowerCase(), mModuleName.toLowerCase() + "_view_model.dart");
+                content = dealTemplateContent(content,"view_model");
+                writeToFile(content, appPath + mPackageName.toLowerCase() + "/view_model", mModuleName.toLowerCase() + "_view_model.dart");
                 break;
             case Model:
                 fileName = "TemplateModel.txt";
                 content = ReadTemplateFile(fileName);
-                content = dealTemplateContent(content);
-                writeToFile(content, appPath + mPackageName.toLowerCase(), mModuleName.toLowerCase() + "_model.dart");
+                content = dealTemplateContent(content,"view_model");
+                writeToFile(content, appPath + mPackageName.toLowerCase() + "/model", mModuleName.toLowerCase() + "_model.dart");
                 break;
         }
     }
@@ -111,9 +111,9 @@ public class MVVMCreate extends AnAction {
      * @param content
      * @return
      */
-    private String dealTemplateContent(String content) {
+    private String dealTemplateContent(String content,String replaceType) {
         content = content.replace("$name", mModuleName);
-        content = content.replace("$mvvmViewModel",mProjectName + "/" + mPackageName + "/" + mModuleName.toLowerCase() + "_view_model.dart");
+        content = content.replace("$mvvmViewModel",mProjectName + "/" + mPackageName + "/" + replaceType + "/" + mModuleName.toLowerCase() + "_view_model.dart");
         return content;
     }
 
